@@ -3,21 +3,23 @@
 * {
     margin: 0;
     padding: 0;
-    color: whitesmoke;
     box-sizing: border-box;
+    justify-content: space-between;
+    line-height: 1.5;
 }
 
 body {
     background-color: black;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    /* font-size: 16px; */
     padding: 50px 30px;
+    color: whitesmoke;
 }
 
 .container {
     display: flex;
-    max-width: 1100px;
-    margin: 0 auto;
+    /* max-width: 1100px; */
+    /* margin: 0 auto; */
     padding: 20px 30px;
 }
 
@@ -29,6 +31,7 @@ body {
 
 .navbar a {
     text-decoration: none;
+    color: whitesmoke;
 }
 
 .navbar img {
@@ -38,7 +41,7 @@ body {
 .navbar a:hover {
     text-shadow: 0px 0px 5px black,
                 0px 0px 20px black,
-                0px 0px 40px white;
+                0px 0px 30px white;
 }
 
 .navbar {
@@ -72,12 +75,16 @@ ul {
 
 .hero .container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding-top: 20px;
 }
 
-.hero h2 {
-    padding-bottom: 20px;
+.hero h1 {
+
+}
+
+.hero p {
+    text-align: left;
 }
 
 .hero img {
@@ -85,18 +92,26 @@ ul {
     height: 100%;
     margin-right: 30px;
     border-radius: 10px;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 .services .container {
-    display: flex;
-    padding-top: 20px;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.services .container h1 {
+    font-size: 2em;
+    margin-top: 20px;
 }
 
 .boxes {
-    justify-content: center;
-    /* align-items: center; */
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: space-around;
+    width: min-content;
 }
 
 .box img {
@@ -106,6 +121,9 @@ ul {
     padding: 10px;
     justify-content: center;
     align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .box {
@@ -118,14 +136,44 @@ ul {
     min-width: 90%;
     text-align: center;
     margin-top: 40px;
-    width: 80%;
+    border: 2px solid whitesmoke;
+    min-width: min-content;
 }
 
 .box p {
     margin: 30px;
+    font-size: 18px;
+    flex-wrap: wrap;
 }
 
 .footer {
-    background-color: #f06d1d;
+    padding: 30px;
+    padding-bottom: 30px;
+    background-color: #c9c9c9;
     color: black;
+    border-radius: 20px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 600px) {
+    .navbar ul {
+        display: none;
+    }
+    .hero .container {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .services {
+        display: none;
+    }
+    .hero .container img {
+        max-width: 80%;
+    }
+    
 }

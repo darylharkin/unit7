@@ -8,6 +8,10 @@
     line-height: 1.5;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: black;
     font-family: 'Roboto', sans-serif;
@@ -77,6 +81,7 @@ ul {
     display: flex;
     align-items: flex-start;
     padding-top: 20px;
+    align-items: center;
 }
 
 .hero h1 {
@@ -93,6 +98,7 @@ ul {
     margin-right: 30px;
     border-radius: 10px;
     vertical-align: top;
+    box-shadow: 0 0 10px rgba(255, 255, 255);
 }
 
 .services .container {
@@ -111,7 +117,8 @@ ul {
     /* justify-content: center; */
     align-items: center;
     justify-content: space-around;
-    width: min-content;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .box img {

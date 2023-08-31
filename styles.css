@@ -40,6 +40,14 @@ body {
 
 .navbar img {
     border-radius: 3px;
+    width: 150px;
+    height: auto;
+}
+
+.navbar img a {
+    border-radius: 3px;
+    width: 150px;
+    height: auto;
 }
 
 .navbar a:hover {
@@ -85,7 +93,9 @@ ul {
 }
 
 .hero h1 {
-
+    text-align: center;
+    font-size: 100px;
+    padding: 50px;
 }
 
 .hero p {

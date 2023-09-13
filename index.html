@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elevate your events with professional PA and event hire services in Derry City, Northern Ireland. Serving the North West and beyond, we provide top-quality audio, lighting, and equipment rentals for weddings, conferences, and more. Make your next event unforgettable.">
     <link rel="icon" href="./imgs/unit7_favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles.css">
     <link rel="script" href="./script.js">
@@ -23,9 +24,10 @@
     </nav>
     <div class="hero">
         <div id="big-hero-text">
-            <h1>Elevate your event experience with Unit 7</h1>
+            <p>Elevate Your Event Experience With<span class="logo-text">Unit<span class="italicise-7">7</span></span></p>
         </div>
         <div class="container">
+            <div class="side-by-side">
             <img src="./imgs/u7jeep.jpg" alt="Unit 7 jeep">
             <div>
                 <p>Welcome to Unit 7, the premier destination for audio visual services and solutions in Derry and the wider North 
@@ -42,7 +44,12 @@
                 <p>Let Unit 7 take your events to the next level. Contact us today to learn more about our services and 
                     schedule a consultation. We look forward to helping you create an unforgettable experience.</p>
             </div>
+            </div>
+            <div class="button-container">
+                <button><a href="mailto:info@unit7studios.co.uk?subject=Web Enquiry">Contact Us</a></button>
+            </div>
         </div>
+        
     </div>
     <section id="services">
     <div class="services">
@@ -54,7 +61,7 @@
                     <div>
                     <img src="./imgs/IMG_3848.jpeg" alt="concert photo">
                     <div>
-                        <p>Unit 7 is a premier audio visual company that specializes in providing exceptional audio 
+                        <p>Unit7 is a premier audio visual company that specializes in providing exceptional audio 
                             visual services for concerts and other live events. With our team of expert technicians 
                             and state-of-the-art equipment, we can create a dynamic and immersive experience that will 
                             engage and captivate your audience.</p>
@@ -122,6 +129,58 @@
         <p>Email: <a href="mailto:info@unit7studios.co.uk?subject=Web Enquiry">info@unit7studios.co.uk</a></p>
         <p>Phone: <a href="tel:+447739515476">+44 7739 515476</a>  /</p> <p><a href="tel:+447909951010">+44 7909 951010</a></p>
     </div>
+
+    <div class="cookie-banner">
+        This website uses cookies to ensure you get the best experience on our website. 
+        <button id="accept-cookies">Got it!</button>
+    </div>
+
+    <script>
+        // Function to accept cookies and hide the cookie banner
+        function acceptCookies() {
+            const cookieBanner = document.getElementById("cookie-banner");
+        if (cookieBanner) {
+        cookieBanner.style.display = "none";
+        }
+        }
+        // Select the cookie banner and accept cookies button
+        const cookieBanner = document.querySelector('.cookie-banner');
+        const acceptCookiesBtn = document.getElementById('accept-cookies');
+    
+        // Add a click event listener to the accept cookies button
+        acceptCookiesBtn.addEventListener('click', () => {
+            cookieBanner.style.display = 'none';
+            console.log("mmm cookies");
+    
+            // Function to get a specific cookie by name
+            function getCookie(name) {
+                const cookieName = `${name}=`;
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    let cookie = cookies[i].trim();
+                    if (cookie.indexOf(cookieName) === 0) {
+                        return cookie.substring(cookieName.length, cookie.length);
+                    }
+                }
+                return null;
+            }
+    
+            // Check if the user has accepted cookies
+            const userPreference = getCookie('userPreference');
+    
+            if (userPreference === 'accepted') {
+                // User has already accepted cookies, you can load scripts or perform actions that rely on cookies.
+            } else {
+                // User has not accepted cookies, you can display a cookie notification.
+                acceptCookies(); // Optional, hides the banner immediately
+                // You might have a function to display the cookie notification here.
+    
+                // Set a cookie or use another method to remember user's choice
+                document.cookie = 'userPreference=accepted; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
+            }
+        });
+    </script>
+    
     
 </body>
 </html>

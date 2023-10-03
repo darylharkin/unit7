@@ -90,7 +90,7 @@ button:active {
 
 .navbar {
     background: linear-gradient(20deg, #ff9900, #ff6600);
-    height: 40px;
+    height: 60px;
     padding: 10px 0px;
     position: fixed;
     top: 0;
@@ -164,6 +164,11 @@ ul {
     margin-bottom: 10px;
 } */
 
+.hero .hero-logo {
+    max-width: 50%;
+    border: none;
+}
+
 .hero img {
     max-width: 40%;
     height: auto;
@@ -173,6 +178,7 @@ ul {
     vertical-align: top;
     border: 5px double #c9c9c9;
 }
+
 
 .italic {
     font-family: 'Lacuna Italic', sans-serif;
@@ -249,6 +255,7 @@ a {
 }
 
 .footer {
+    display: flex;
     padding: 30px;
     padding-bottom: 30px;
     background-color: #c9c9c9;
@@ -260,6 +267,17 @@ a {
     text-decoration: none;
     color: black;
     padding-bottom: 0;
+}
+
+.footer i {
+    font-size: 2em;
+    color: #3b5998;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
 }
 
 .cookie-banner {
@@ -358,16 +376,16 @@ a {
 
 .logo-text::after {
     bottom: 0;
-    color: orange;
+    color: #ff9900;
     content: '7';
     font-family: 'Lacuna Italic', sans-serif;
     position: absolute;
     transform: translate(-100%, 0);
 }
 .logo-text::before {
-    color: orange;
+    color: #ff9900;
     content: '  ';
-    border: 22px solid orange;
+    border: 22px solid #ff9900;
     border-style: double;
     border-radius: 60%;
     /* Halve the circle */
